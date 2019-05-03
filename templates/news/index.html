@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>首页-新经资讯</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for("static",filename="news/css/reset.css") }}">
+    <link rel="stylesheet" type="text/css" href="/static/news/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/static/news/css/main.css">
     <script type="text/javascript" src="/static/news/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/static/news/js/main.js"></script>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="conter_con">
         <ul class="list_con fl">
             <li>
@@ -96,7 +96,7 @@
             </ul>
         </div>
     </div>
-    <div class="footer">        
+    <div class="footer">
         <div class="footer_links">
             <a href="">关于我们</a>
             <span>|</span>
@@ -111,7 +111,7 @@
 电话：010-****888    京ICP备*******8号
         </p>
     </div>
-    
+
     <!-- 登录表单 -->
     <form class="login_form_con">
         <div class="login_form">
@@ -135,7 +135,7 @@
         <div class="mask"></div>
     </form>
 
-    <input type="hidden" id="csrf_token" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" id="csrf_token" value="{{ csrf_token() }}">
 
     <!-- 注册表单 -->
     <form class="register_form_con">
@@ -145,7 +145,7 @@
                 <a href="javascript:;" class="shutoff"></a>
             </div>
             <div class="form_group">
-                <input type="text" name="mobile" autocomplete="off" id="register_mobile" class="phone_input">
+                <input type="text" name="mobile" autocomplete="off" id="register-mobile" class="phone_input">
                 <div class="input_tip">手机号</div>
                 <div id="register-mobile-err" class="error_tip">手机号不能为空</div>
             </div>

@@ -1,4 +1,4 @@
-from flask import Blueprint, make_response, jsonify
+from flask import Blueprint, make_response, jsonify, redirect
 from flask import current_app
 from flask import request
 from flask import session
@@ -41,7 +41,7 @@ def sms_yzm():
     session['sms_yzm'] = yzm2
 
     # 发送短信
-    from utills.ytx_sdk.ytx_send import sendTemplateSMS
+    from utils.ytx_sdk.ytx_send import sendTemplateSMS
     # sendTemplateSMS(mobile,{yzm2,5},1)
     print(yzm2)
 
@@ -51,11 +51,11 @@ def sms_yzm():
 @user_blueprint.route('/register', methods=['POST'])
 def register():
     # 接收数据
-    dict1 = request.form
-    mobile = dict1.get('mobile')
-    yzm_image = dict1.get('yzm_image')
-    yzm_sms = dict1.get('yzm_sms')
-    pwd = dict1.get('pwd')
+    register_info = request.form
+    mobile = register_info.get('mobile')
+    yzm_image = register_info.get('yzm_image')
+    yzm_sms = register_info.get('yzm_sms')
+    pwd = register_info.get('pwd')
 
     # 验证数据的有效性
     # 保证所有的数据都被填写,列表中只要有一个值为False,则结果为False
@@ -97,29 +97,29 @@ def register():
 @user_blueprint.route('/login', methods=['POST'])
 def login():
     # 接收数据
-    dict1 = request.form
-    mobile = dict1.get('mobile')
-    pwd = dict1.get('pwd')
-
-    # 验证有效性
-    if not all([mobile, pwd]):
+    login_info = request.form
+    mobile = login_info.get("mobile")
+    password = login_info.get("password")
+    # 检查所有参数
+    if not all([mobile, password]):
         return jsonify(result=1)
-
-    # 查询判断、响应
+    # # 判断手机号是否合法
+    # import re
+    # check_mobile = re.compile(r"^1[2-9]\d{9}$")
+    # check_mobile = check_mobile.match(mobile)
+    # if not check_mobile:
+    #     return jsonify(result=2)
+    # 查询数据库中是否存在该用户
     user = UserInfo.query.filter_by(mobile=mobile).first()
-    # 判断mobile是否正确
     if user:
-        # 进行密码对比，flask内部提供了密码加密、对比的函数
-        if user.check_pwd(pwd):
-            # 状态保持
-            session['user_id'] = user.id
-            # 返回成功的结果
+        if user.check_pwd(password):  # flask提供了对应的解密算法
+            # 密码正确，则表示用户可以登录，做状态保持
+            # session 默认存储在cookies中
+            session["user_id"] = user.id
             return jsonify(result=4, avatar=user.avatar, nick_name=user.nick_name)
         else:
-            # 密码错误
             return jsonify(result=3)
     else:
-        # 如果查询不到数据返回None，表示mobile错误
         return jsonify(result=2)
 
 
