@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eca4d77-282e-4375-aedd-ed11e44db72c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/abc/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abc/__init__.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -107,6 +106,8 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/static/news/js/main.js" />
         <option value="$PROJECT_DIR$/views_user.py" />
+        <option value="$PROJECT_DIR$/abc/xxxx.py" />
+        <option value="$PROJECT_DIR$/abc/xxxxx.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -140,11 +141,6 @@
             <path>
               <item name="XJZX" type="b2602c69:ProjectViewProjectNode" />
               <item name="XJZX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XJZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XJZX" type="462c0819:PsiDirectoryNode" />
-              <item name="abc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XJZX" type="b2602c69:ProjectViewProjectNode" />
@@ -359,8 +355,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://I:/python就业视频/flask/Flask2018-5-26项目1-搭框架-建模型/xjzx/models.py" />
-    <entry file="file://I:/python就业视频/flask/Flask2018-5-26项目1-搭框架-建模型/xjzx/config.py" />
     <entry file="file://I:/python就业视频/flask/Flask2018-5-26项目1-搭框架-建模型/xjzx/xjzx.py" />
     <entry file="file://I:/python就业视频/flask/Flask2018-5-20模板/demo2/d1_request.py" />
     <entry file="file://I:/python就业视频/flask/Flask2018-5-27项目2注册-登录-退出-验证/xjzx/config.py" />
@@ -585,10 +579,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/abc/xxxxx.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abc/xxxx.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
